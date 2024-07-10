@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark">
+    <div
+      class="d-flex flex-column justify-content-center align-items-center bg-dark pb-4 pt-4 position-relative"
+      style="min-height: 100vh"
+    >
+      <div class="container-sm bg-secondary p-5">
+        <form class="add-product">
+          <label for="name" class="mb-3 text-light h6">Nome do produto: </label>
+          <input
+            type="text"
+            class="nomeProduct form-control inputDate"
+            id="name"
+            maxlength="80"
+            required
+          />
+          <label for="descriptionProduct" class="mb-3 mt-3 text-light h6"
+            >Descrição do produto:
+          </label>
+          <input
+            type="text"
+            class="nomeProduct form-control inputDate"
+            id="descriptionProduct"
+            required
+          />
+          <label for="price" class="mb-3 mt-3 text-light h6">Preço: </label>
+          <input
+            type="number"
+            class="nomeProduct form-control inputDate"
+            id="price"
+            required
+          />
+          <span for="name" class="d-block mt-4 text-light h6"
+            >Disponível para venda:
+          </span>
+          <div class="choice-sale">
+            <div class="d-block">
+              <input
+                type="radio"
+                class="nomeProduct form-check-input"
+                id="optionYes"
+                value="yes"
+                name="isDisponible"
+                checked
+              />
+              <label for="optionYes" class="text-light">Sim</label>
+            </div>
+            <div class="d-block">
+              <input
+                type="radio"
+                class="nomeProduct form-check-input"
+                id="optionNone"
+                value="none"
+                name="isDisponible"
+              />
+              <label class="text-light" for="optionNone">Não</label>
+            </div>
+          </div>
+          <div class="submit-btn container-fluid d-flex justify-content-center">
+            <button type="submit" class="btn btn-submit btn-success mt-4">
+              <span class="h6">REGISTRAR PRODUTO</span>
+            </button>
+            <button class="btn btn-primary mt-4 ms-2 text-uppercase openList">
+              <span class="h6">Visualizar lista de produtos</span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div
+        class="d-none container-fluid p-5 position-absolute table-products"
+        style="min-height: 100%; background-color: rgb(33, 37, 41, 0.8)"
+      >
+        <div class="container-fluid closeTable d-flex justify-content-end">
+          <button
+            class="offList btn btn-danger rounded-circle"
+            title="Close Table"
+          >
+            <span class="h6">X</span>
+          </button>
+        </div>
+        <table
+          class="products table table-striped table-bordered table-dark table-hover mt-5"
+        >
+          <caption class="text-center h6 mt-3">
+            PRODUTOS CADASTRADOS
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">
+                <button class="btn order-name container-fluid btn-dark">
+                  <span class="h6 text-uppercase">Nome </span
+                  ><span class="d-inline-block arrow-name-order">↓ </span>
+                </button>
+              </th>
+              <th scope="col">
+                <button class="btn order-value container-fluid btn-dark">
+                  <span class="h6 text-uppercase">Valor </span>
+                  <span
+                    class="d-inline-block arrow-value-order trueOrder"
+                    style="transform: rotate(180deg)"
+                    >↓</span
+                  >
+                </button>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="table-body"></tbody>
+        </table>
+        <button class="btn btn-primary d-block mx-auto addProduct">
+          <span class="h6 text-uppercase">Adicionar novo produto</span>
+        </button>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/src/js/index.js"></script>
+  </body>
+</html>
